@@ -49,7 +49,7 @@ const Sidebar: React.FC = () => {
           <IconButton onClick={handleDrawerToggle}>
             {isOpen ? <ChevronLeftIcon /> : <MenuIcon />}
           </IconButton>
-        </div>
+        </Box>
         <Divider />
         <Box sx={{ py: 3 }} >
           <Typography variant="h6" component="h1" noWrap sx={{ px: 2 }}>
