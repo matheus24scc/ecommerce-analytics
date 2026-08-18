@@ -183,3 +183,12 @@ This project is open source and available under the MIT License.
 - [Material-UI](https://mui.com/)
 - [Recharts](https://recharts.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
+
+## Status (checkup 2026-08-18)
+> Revisado na campanha de repo-checkup. Relatorio completo: `~/repo-checkup/reports/ecommerce-analytics.md` (local do mantenedor, nao no repo).
+- **Build/Install**: PASS — `npm ci` RC=0; `npm run build` RC=0 (1718 módulos transformados, `dist/` gerado).
+- **Smoke test**: N/A — não há script `test` nem arquivos de teste no repo.
+- **Para rodar de ponta-a-ponta precisa de**: nenhum serviço externo (app front-end Vite/React; sem backend/DB citado no checkup).
+- **Inconsistencias conhecidas (README vs codigo)**: README declarava "MIT License" mas não havia arquivo `LICENSE` (corrigido no checkup: `LICENSE` MIT adicionada).
+- **Seguranca**: 4 vulnerabilidades (1 high, 3 moderate) em deps transitivas — `vite <=6.4.2` (high), `esbuild <=0.24.2` (moderate), `react-router`/`react-router-dom` 6.x (moderate); o fix exige major bump (`vite@8`, `react-router@7`) → NÃO corrigidas automaticamente (decisão humana); não foi rodado `npm audit fix --force`.
+- **Estado resumido**: build verde, mas lint FAIL (sem ESLint config próprio) e 4 vulns (1 high) exigem ação humana (upgrades breaking); repo sem suíte de testes.
